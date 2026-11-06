@@ -2,14 +2,13 @@
 public class Empresa extends Perfil {
 
     private String cnpj;
-    private String setor;
+    private String areaAtuacao;
 
-    public Empresa(String nome, String email, String endereco,
-                   String cnpj, String setor) {
+    public Empresa(String nome, String telefone, String email, Localizacao localizacao, String cnpj, String areaAtuacao) {
 
-        super(nome, email, endereco);
+        super(nome, telefone, email, localizacao);
         this.cnpj = cnpj;
-        this.setor = setor;
+        this.areaAtuacao = areaAtuacao;
     }
 
     public String getCnpj() {
@@ -20,19 +19,18 @@ public class Empresa extends Perfil {
         this.cnpj = cnpj;
     }
 
-    public String getSetor() {
-        return setor;
+    public String getAreaAtuacao() {
+        return areaAtuacao;
     }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
+    
+    public void setAreaAtuacao(String areaAtuacao) {
+        this.areaAtuacao = areaAtuacao;
     }
 
     @Override
     public void exibirDados() {
         System.out.println("Empresa: " + getNome());
         System.out.println("E-mail: " + getEmail());
-        System.out.println("Endereço: " + getEndereco());
         System.out.println("CNPJ: " + cnpj);
         System.out.println("Setor: " + setor);
     }
