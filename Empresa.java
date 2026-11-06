@@ -1,8 +1,12 @@
 
 public class Empresa extends Perfil {
-
+    
+    // atributos 
+    
     private String cnpj;
     private String areaAtuacao;
+
+    // construtor
 
     public Empresa(String nome, String telefone, String email, Localizacao localizacao, String cnpj, String areaAtuacao) {
 
@@ -10,6 +14,8 @@ public class Empresa extends Perfil {
         this.cnpj = cnpj;
         this.areaAtuacao = areaAtuacao;
     }
+
+    // metódos
 
     public String getCnpj() {
         return cnpj;
@@ -30,9 +36,17 @@ public class Empresa extends Perfil {
     @Override
     public void exibirDados() {
         System.out.println("Empresa: " + getNome());
+        System.out.println("Telefone: " + getTelefone());
         System.out.println("E-mail: " + getEmail());
         System.out.println("CNPJ: " + cnpj);
-        System.out.println("Setor: " + setor);
+        System.out.println("Área de atuação: " + areaAtuacao);
+        
+        // exibição da localização
+        
+        System.out.println("CEP: " + getLocalizacao().getCep());
+        System.out.println("Bairro: " + getLocalizacao().getBairro());
+        System.out.println("Cidade: " + getLocalizacao().getCidade());
+        System.out.println("Número: " + getLocalizacao().getNumero());
     }
 }
 
