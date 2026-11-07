@@ -2,13 +2,15 @@
 public abstract class Perfil {
 
     private String nome;
+    private String telefone;
     private String email;
-    private String endereco;
+    private Localizacao localizacao;
 
-    public Perfil(String nome, String email, String endereco) {
+    public Perfil(String nome, String telefone,String email, Localizacao localizacao) {
         this.nome = nome;
+        this.telefone = telefone;
         this.email = email;
-        this.endereco = endereco;
+        this.localizacao = localizacao;
     }
 
     public String getNome() {
@@ -19,6 +21,14 @@ public abstract class Perfil {
         this.nome = nome;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+    
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -27,12 +37,12 @@ public abstract class Perfil {
         this.email = email;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public Localizacao getLocalizacao() {
+        return localizacao;
     }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    
+    public void setLocalizacao(Localizacao localizacao) {
+        this.localizacao = localizacao;
     }
 
     public abstract void exibirDados();

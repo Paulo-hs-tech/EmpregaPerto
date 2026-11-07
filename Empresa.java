@@ -1,16 +1,21 @@
 
 public class Empresa extends Perfil {
-
+    
+    // atributos 
+    
     private String cnpj;
-    private String setor;
+    private String areaAtuacao;
 
-    public Empresa(String nome, String email, String endereco,
-                   String cnpj, String setor) {
+    // construtor
 
-        super(nome, email, endereco);
+    public Empresa(String nome, String telefone, String email, Localizacao localizacao, String cnpj, String areaAtuacao) {
+
+        super(nome, telefone, email, localizacao);
         this.cnpj = cnpj;
-        this.setor = setor;
+        this.areaAtuacao = areaAtuacao;
     }
+
+    // metódos
 
     public String getCnpj() {
         return cnpj;
@@ -20,21 +25,28 @@ public class Empresa extends Perfil {
         this.cnpj = cnpj;
     }
 
-    public String getSetor() {
-        return setor;
+    public String getAreaAtuacao() {
+        return areaAtuacao;
     }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
+    
+    public void setAreaAtuacao(String areaAtuacao) {
+        this.areaAtuacao = areaAtuacao;
     }
 
     @Override
     public void exibirDados() {
         System.out.println("Empresa: " + getNome());
+        System.out.println("Telefone: " + getTelefone());
         System.out.println("E-mail: " + getEmail());
-        System.out.println("Endereço: " + getEndereco());
         System.out.println("CNPJ: " + cnpj);
-        System.out.println("Setor: " + setor);
+        System.out.println("Área de atuação: " + areaAtuacao);
+        
+        // exibição da localização
+        
+        System.out.println("CEP: " + getLocalizacao().getCep());
+        System.out.println("Bairro: " + getLocalizacao().getBairro());
+        System.out.println("Cidade: " + getLocalizacao().getCidade());
+        System.out.println("Número: " + getLocalizacao().getNumero());
     }
 }
 
