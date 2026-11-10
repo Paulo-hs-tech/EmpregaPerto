@@ -1,17 +1,17 @@
-Public Class Localizacao{
-    //encapsulamneto e atributos
+public class Localizacao{
+    //encapsulamento e atributos
     private String cep;
     private String bairro;
     private String cidade;
     private String numero;
     
-    Public Localizacao(String cep, String bairro, String cidade, String numero){
+    public Localizacao(String cep, String bairro, String cidade, String numero){
         this.cep = cep;
         this.bairro = bairro;
         this.cidade = cidade;
         this.numero = numero;
     }
-    //métodos get e set
+    //métodos getters e setters
     public String getCep(){
         return cep;
     }
@@ -39,5 +39,18 @@ Public Class Localizacao{
         this.numero = numero;
     }
     
+    //método de exibir o endereço 
+    public void exibirEndereço(){
+    System.out.println("CEP: " + cep);
+    System.out.println("Bairro: " + bairro);
+    System.out.println("Cidade: " + cidade);
+    System.out.println("Número: " + numero);
+    }
+
+    //verificar se duas localidades são do mesmo bairro
+    public boolean mesmoBairro(Localizacao outra){
+        return this.bairro.equalsIgnoreCase(outra.getBairro())
+          && this.cidade.equalsIgnoreCase(outra.getCidade());
+ }
 
 }
