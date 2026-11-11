@@ -47,7 +47,7 @@ public class vagaEmprego{
 
     //Métodos
     public void publicarvagaEmprego(Empresa Empresa){
-        System.out.println("Candidate-se: ");
+        System.out.println("Candidate-se: " );
         System.out.println("Empresa: " + Empresa.getNomeEmpresa());
         System.out.println("Cargo: " + cargo);
         System.out.println("Salario: " + salario);
