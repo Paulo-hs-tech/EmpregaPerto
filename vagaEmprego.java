@@ -6,7 +6,7 @@ public class vagaEmprego{
     private String tipoContratacao;
 
     //Construtor
-    public VagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao){
+    public vagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao){
         this.cargo = cargo;
         this.salario = salario;
         this.requisitos = requisitos;
