@@ -1,4 +1,4 @@
-public class vagaEmprego{
+public class VagaEmprego{
     //Atributos
     private String cargo;
     private double salario;
@@ -7,7 +7,7 @@ public class vagaEmprego{
     private Empresa empresa;
 
     //Construtor
-    public vagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao, Empresa empresa) {
+    public VagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao, Empresa empresa) {
 
         this.cargo = cargo;
         this.salario = salario;
