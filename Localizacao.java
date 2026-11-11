@@ -40,17 +40,22 @@ public class Localizacao{
     }
     
     //método de exibir o endereço 
-    public void exibirEndereço(){
-    System.out.println("CEP: " + cep);
-    System.out.println("Bairro: " + bairro);
-    System.out.println("Cidade: " + cidade);
-    System.out.println("Número: " + numero);
+    public void exibirEndereco(){
+        System.out.println("CEP: " + cep);
+        System.out.println("Bairro: " + bairro);
+        System.out.println("Cidade: " + cidade);
+        System.out.println("Número: " + numero);
     }
 
     //verificar se duas localidades são do mesmo bairro
     public boolean mesmoBairro(Localizacao outra){
         return this.bairro.equalsIgnoreCase(outra.getBairro())
           && this.cidade.equalsIgnoreCase(outra.getCidade());
- }
+    }
 
+    // Verificar se duas localizações são da mesma cidade
+    public boolean mesmaCidade(Localizacao outra) {
+        return this.cidade.equalsIgnoreCase(outra.getCidade());
+    }
+    
 }
