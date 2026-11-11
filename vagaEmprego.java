@@ -4,14 +4,19 @@ public class vagaEmprego{
     private double salario;
     private String requisitos;
     private String tipoContratacao;
+    private Empresa empresa;
 
     //Construtor
-    public vagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao){
+    public vagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao, Empresa empresa) {
+
         this.cargo = cargo;
         this.salario = salario;
         this.requisitos = requisitos;
         this.tipoContratacao = tipoContratacao;
+        this.empresa = empresa;
     }
+    
+    //Métodos
 
     public String getCargo(){
         return cargo;
@@ -29,6 +34,11 @@ public class vagaEmprego{
         return tipoContratacao;
     }
 
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+    
+
     public void setCargo(String cargo){
         this.cargo = cargo;
     }
@@ -45,13 +55,14 @@ public class vagaEmprego{
         this.tipoContratacao = tipoContratacao;
     }
 
-    //Métodos
-    public void publicarvagaEmprego(Empresa Empresa){
-        System.out.println("Candidate-se: " );
-        System.out.println("Empresa: " + Empresa.getNomeEmpresa());
-        System.out.println("Cargo: " + cargo);
-        System.out.println("Salario: " + salario);
-        System.out.println("Requisitos: " + requisitos);
-        System.out.println("Tipo de contratacao: " + tipoContratacao);
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
-}
+    
+    public void publicarVagaEmprego() {
+        System.out.println("Empresa: " + empresa.getNome());
+        System.out.println("Cargo: " + cargo);
+        System.out.println("Salário: " + salario);
+        System.out.println("Requisitos: " + requisitos);
+        System.out.println("Tipo de contratação: " + tipoContratacao);
+    }
