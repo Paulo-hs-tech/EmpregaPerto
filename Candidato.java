@@ -1,4 +1,4 @@
-public class Candidato{
+public class Candidato extends Perfil {
     //Atributos
     private String profissao;
     private String experiencia;
@@ -6,7 +6,10 @@ public class Candidato{
     private String formacao;
 
     //Construtor
-    public Candidato(String profissao, String experiencia, String curriculo, String formacao){
+    public Candidato(String nome, String telefone, String email, Localizacao localizacao, String profissao, String experiencia, String curriculo, String formacao) {
+
+        super(nome, telefone, email, localizacao);
+    
         this.profissao = profissao;
         this.experiencia = experiencia;
         this.curriculo = curriculo;
@@ -48,6 +51,19 @@ public class Candidato{
     }
 
     //Métodos
+
+    @Override
+    public void exibirDados() {
+        System.out.println("Candidato: " + getNome());
+        System.out.println("Telefone: " + getTelefone());
+        System.out.println("E-mail: " + getEmail());
+        System.out.println("Profissão: " + profissao);
+        System.out.println("Experiência: " + experiencia);
+        System.out.println("Currículo: " + curriculo);
+        System.out.println("Formação: " + formacao);
+    
+        getLocalizacao().exibirEndereco();
+    }
     public void cadastrarCurriculo(String curriculo){
         this.curriculo = curriculo;
         System.out.println("Currículo cadastrado com sucesso!");
