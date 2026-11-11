@@ -41,12 +41,7 @@ public class Empresa extends Perfil {
         System.out.println("CNPJ: " + cnpj);
         System.out.println("Área de atuação: " + areaAtuacao);
         
-        // exibição da localização
-        
-        System.out.println("CEP: " + getLocalizacao().getCep());
-        System.out.println("Bairro: " + getLocalizacao().getBairro());
-        System.out.println("Cidade: " + getLocalizacao().getCidade());
-        System.out.println("Número: " + getLocalizacao().getNumero());
+        getLocalizacao().exibirEndereco();
     }
 }
 
