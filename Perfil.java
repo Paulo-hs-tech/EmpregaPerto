@@ -1,3 +1,4 @@
+// Classe abstrata que representa os dados básicos compartilhados entre candidatos e empresas.
 
 public abstract class Perfil {
 
