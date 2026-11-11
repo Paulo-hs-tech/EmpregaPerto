@@ -73,10 +73,6 @@ public class Candidato extends Perfil {
         System.out.println("Buscando vagas para: " + this.profissao);
     }
 
-    public void enviarCandidatura(String vaga){
-        System.out.println("Candidatura enviada para: " + vaga);
-    }
-
     public void atualizarCurriculo(String novoCurriculo){
         this.curriculo = novoCurriculo;
         System.out.println("Currículo atualizado com sucesso!");
