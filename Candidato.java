@@ -1,53 +1,68 @@
-public class Candidato {
+public class Candidato{
     //Atributos
-    private String nome;
-    private String telefone;
-    private String habilidades;
-    private String areaDeInteresse;
+    private String profissao;
+    private String experiencia;
+    private String curriculo;
+    private String formacao;
 
     //Construtor
-    public Candidato(String nome, String telefone, String habilidades, String areaDeInteresse){
-        this.nome = nome;
-        this.telefone = telefone;
-        this.habilidades = habilidades;
-        this.areaDeInteresse = areaDeInteresse;
+    public Candidato(String profissao, String experiencia, String curriculo, String formacao){
+        this.profissao = profissao;
+        this.experiencia = experiencia;
+        this.curriculo = curriculo;
+        this.formacao = formacao;
     }
 
-    public String getNome(){
-        return nome;
+    //Getters
+    public String getProfissao(){
+        return profissao;
     }
 
-    public String getTelefone(){
-        return telefone;
+    public String getExperiencia(){
+        return experiencia;
     }
 
-    public String getHabilidades(){
-        return habilidades;
+    public String getCurriculo(){
+        return curriculo;
     }
 
-    public String getAreaDeInteresse(){
-        return areaDeInteresse;
+    public String getFormacao(){
+        return formacao;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
+    //Setters
+    public void setProfissao(String profissao){
+        this.profissao = profissao;
     }
 
-    public void setTelefone(String telefone){
-        this.telefone = telefone;
+    public void setExperiencia(String experiencia){
+        this.experiencia = experiencia;
     }
 
-    public void steHabilidades(String habilidades){
-        this.habilidades = habilidades;
-    }
-    
-    public void setAreaDeInteresse(String areaDeInteresse){
-        this.areaDeInteresse = areaDeInteresse;
+    public void setCurriculo(String curriculo){
+        this.curriculo = curriculo;
     }
 
-    //Método
-    public void candidatarse(vagaEmpresa vagaEmpresa){
-        System.out.println(nome + "vaga" + vagaEmpresa.getNome() + "!");
+    public void setFormacao(String formacao){
+        this.formacao = formacao;
     }
 
+    //Métodos
+    public void cadastrarCurriculo(String curriculo){
+        this.curriculo = curriculo;
+        System.out.println("Currículo cadastrado com sucesso!");
+    }
+
+    public void buscarVagas(){
+        System.out.println("Buscando vagas para: " + this.profissao);
+    }
+
+    public void enviarCandidatura(String vaga){
+        System.out.println("Candidatura enviada para: " + vaga);
+    }
+
+    public void atualizarCurriculo(String novoCurriculo){
+        this.curriculo = novoCurriculo;
+        System.out.println("Currículo atualizado com sucesso!");
+    }
 }
