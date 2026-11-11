@@ -1,49 +1,57 @@
-public class vagaEmpresa {
+public class vagaEmprego{
     //Atributos
-    private String nome;
-    private String habilidadesParaVaga;
-    private String empresa;
-    private String enderecoDaEmpresa;
+    private String cargo;
+    private double salario;
+    private String requisitos;
+    private String tipoContratacao;
 
     //Construtor
-    public vagaEmpresa(String habilidadesParaVaga, String empresa, String enderecoDaEmpresa){
-        this.habilidadesParaVaga = habilidadesParaVaga;
-        this.empresa = empresa;
-        this.enderecoDaEmpresa = enderecoDaEmpresa;
+    public VagaEmprego(String cargo, double salario, String requisitos, String tipoContratacao){
+        this.cargo = cargo;
+        this.salario = salario;
+        this.requisitos = requisitos;
+        this.tipoContratacao = tipoContratacao;
     }
 
-    public String getNome(){
-        return nome;
+    public String getCargo(){
+        return cargo;
     }
 
-    public String getHabilidadesParaVaga(){
-        return habilidadesParaVaga;
+    public double getSalario(){
+        return salario;
     }
 
-    public String getEmpresa(){
-        return empresa;
+    public String getRequisitos(){
+        return requisitos;
     }
 
-    public String getEnderecoDaEmpresa(){
-        return enderecoDaEmpresa;
+    public String getTipoContratacao(){
+        return tipoContratacao;
     }
 
-    public void setHabilidadesParaVaga(String habilidadesParaVaga){
-        this.habilidadesParaVaga = habilidadesParaVaga;
+    public void setCargo(String cargo){
+        this.cargo = cargo;
     }
 
-    public void setEmpresa(String empresa){
-        this.empresa = empresa;
+    public void setSalario(double salario){
+        this.salario = salario;
     }
 
-    public void setEnderecoDaEmpresa(String enderecoDaEmpresa){
-        this.enderecoDaEmpresa = enderecoDaEmpresa;
+    public void setRequisitos(String requisitos){
+        this.requisitos = requisitos;
+    }
+
+    public void setTipoContratacao(String tipoContratacao){
+        this.tipoContratacao = tipoContratacao;
     }
 
     //Método
-    public void candidatura(candidato candidato){
-         System.out.println(habilidadesParaVaga + "Empresa" + candidato.getNome() + "!");
+    public void publicarvagaEmprego(Empresa Empresa){
+        System.out.println("Candidate-se: ");
+        System.out.println("Empresa: " + Empresa.getNomeEmpresa());
+        System.out.println("Cargo: " + cargo);
+        System.out.println("Salario: " + salario);
+        System.out.println("Requisitos: " + requisitos);
+        System.out.println("Tipo de contratacao: " + tipoContratacao);
     }
 }
-
-O que já foi feito
