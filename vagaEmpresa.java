@@ -45,7 +45,7 @@ public class vagaEmprego{
         this.tipoContratacao = tipoContratacao;
     }
 
-    //Método
+    //Métodos
     public void publicarvagaEmprego(Empresa Empresa){
         System.out.println("Candidate-se: ");
         System.out.println("Empresa: " + Empresa.getNomeEmpresa());
