@@ -66,3 +66,4 @@ public class VagaEmprego{
         System.out.println("Requisitos: " + requisitos);
         System.out.println("Tipo de contratação: " + tipoContratacao);
     }
+}
